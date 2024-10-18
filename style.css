@@ -1,0 +1,139 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Светло-серый фон */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url('https://example.com/path/to/your/study-background.jpg'); /* Замените на ваше изображение */
+    background-size: cover; /* Масштабирование фона */
+    background-position: center; /* Центрирование фона */
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #495057; /* Темно-серый цвет */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #495057; /* Темно-серый цвет */
+    margin-top: 20px;
+}
+
+#timer {
+    font-size: 3em;
+    color: #007bff; /* Синий цвет */
+    margin-top: 15px;
+}
+
+.button-group, .challenge, .motivation, .custom-tasks {
+    margin-top: 25px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.start {
+    background-color: #6c757d; /* Серый цвет */
+    color: #fff;
+}
+
+.start:hover {
+    background-color: #5a6268; /* Темно-серый цвет */
+}
+
+.reset {
+    background-color: #dc3545; /* Красный цвет */
+    color: #fff;
+}
+
+.reset:hover {
+    background-color: #c82333; /* Темно-красный цвет */
+}
+
+.task-done {
+    background-color: #28a745; /* Зеленый цвет */
+    color: #fff;
+}
+
+.task-done:hover {
+    background-color: #218838; /* Темно-зеленый цвет */
+}
+
+.new-task {
+    background-color: #6f42c1; /* Фиолетовый цвет */
+    color: #fff;
+}
+
+.new-task:hover {
+    background-color: #5a3e9d; /* Темно-фиолетовый цвет */
+}
+
+.add {
+    background-color: #ffc107; /* Желтый цвет */
+    color: #fff;
+}
+
+.add:hover {
+    background-color: #e0a800; /* Темно-желтый цвет */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 70%;
+    margin-right: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+ul li {
+    padding: 10px;
+    background-color: #f8f9fa; /* Светло-серый фон для задач */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li button {
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+/* Стили для историй успеха */
+.success-stories {
+    margin-top: 25px;
+    background-color: #f8f9fa; /* Светло-серый фон */
+    padding: 20px;
+    border-radius: 10px
