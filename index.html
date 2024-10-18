@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мотивация для Учёбы</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Подключение библиотеки Chart.js -->
+</head>
+<body>
+<div class="container">
+    <h1>Мотивация для Учёбы</h1>
+
+    <!-- Истории успеха -->
+    <div class="success-stories">
+        <h2>Истории успеха</h2>
+        <div id="stories">
+            <p><strong>Стив Джобс:</strong> Стив Джобс, сооснователь Apple, был исключён из колледжа, но это не
+                остановило его. Он продолжал учиться самостоятельно и в конечном итоге создал одну из самых успешных
+                компаний в мире.</p>
+            <p><strong>Малала Юсуфзай:</strong> Малала, получившая Нобелевскую премию мира, боролась за право девочек на
+                образование в Пакистане. Её история вдохновляет миллионы людей по всему миру.</p>
+            <p><strong>Билл Гейтс:</strong> Основатель Microsoft, Билл Гейтс, бросил Гарвард, но продолжал учиться и
+                экспериментировать с технологиями, что привело к созданию одной из самых крупных компаний в мире.</p>
+            <p><strong>Опра Уинфри:</strong> Опра выросла в бедности, но её стремление к обучению и
+                самосовершенствованию помогло ей стать одной из самых влиятельных женщин в мире.</p>
+        </div>
+    </div>
+
+    <!-- Помодоро Таймер -->
+    <div class="pomodoro">
+        <h2>Таймер "Помодоро"</h2>
+        <div id="timer">25:00</div>
+        <div class="button-group">
+            <button class="btn start" onclick="startPomodoro()">Начать</button>
+            <button class="btn reset" onclick="resetPomodoro()">Сбросить</button>
+        </div>
+    </div>
+
+    <!-- Ежедневные Задачи -->
+    <div class="challenge">
+        <h2>Ежедневные Задачи</h2>
+        <div id="daily-challenge"></div>
+        <button class="btn task-done" onclick="markTaskDone()">Задание выполнено</button>
+        <p>Выполнено задач сегодня: <span id="tasks-completed">0</span></p>
+        <button class="btn new-task" onclick="generateChallenge()">Новое задание</button>
+    </div>
+
+    <!-- Собственные Задачи -->
+    <div class="custom-tasks">
+        <h2>Мои Задачи</h2>
+        <form onsubmit="addCustomTask(); return false;">
+            <input type="text" id="custom-task-input" placeholder="Введите свою задачу">
+            <button class="btn add" type="submit">Добавить задачу</button>
+        </form>
+        <ul id="custom-task-list"></ul>
+    </div>
+
+    <!-- Иконка результатов -->
+    <div class="results">
+        <h2>Результаты пользователей</h2>
+        <button class="btn" id="show-results">Показать результаты</button>
+        <canvas id="resultsChart" style="display: none;"></canvas>
+    </div>
+
+    <!-- Мотивация -->
+    <div class="motivation">
+        <h2>Мотивационные Цитаты</h2>
+        <div id="quote"></div>
+        <button class="btn quote" onclick="generateMotivation()">Получить мотивацию</button>
+    </div>
+</div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+
+        <!-- Форма регистрации ученика -->
+        <h2>Регистрация ученика</h2>
+        <form id="register-student-form">
+            <input type="text" id="student-username" placeholder="Имя пользователя" required>
+            <input type="password" id="student-password" placeholder="Пароль" required>
+            <input type="text" id="parent-username" placeholder="Имя пользователя родителя (необязательно)">
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+
+        <!-- Форма регистрации родителя -->
+        <h2>Регистрация родителя</h2>
+        <form id="register-parent-form">
+            <input type="text" id="parent-username-reg" placeholder="Имя пользователя" required>
+            <input type="password" id="parent-password" placeholder="Пароль" required>
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+
+        <!-- Форма входа -->
+        <h2>Вход</h2>
+        <form id="login-form">
+            <input type="text" id="login-username" placeholder="Имя пользователя" required>
+            <input type="password" id="login-password" placeholder="Пароль" required>
+            <button type="submit" class="btn">Войти</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+</div>
